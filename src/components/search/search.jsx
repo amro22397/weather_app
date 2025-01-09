@@ -6,6 +6,8 @@ import axios from 'axios'
 
 const Search = ({ onSearchChange }) => {
 
+  console.log(process.env.WEATHER_STACK_API_KEY)
+
   const [search, setSearch] = useState(null);
 
   const loadOptions = async (inputValue) => {
@@ -13,7 +15,7 @@ const Search = ({ onSearchChange }) => {
     // console.log(options.url);
     try {
       // 
-      const response = await axios.get(`http://api.weatherstack.com/current?access_key=${process.env.REACT_APP_WEATHER_STACK_API_KEY}&query=${inputValue}`);
+      const response = await axios.get(`http://api.weatherstack.com/current?access_key=${process.env.WEATHER_STACK_API_KEY}&query=${inputValue}`);
       console.log(response);
 
       return {

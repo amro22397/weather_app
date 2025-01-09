@@ -12,7 +12,9 @@ const App = () => {
   const [forecast, setForecast] = useState(null);
 
   
+  console.log(process.env.WEATHER_STACK_API_KEY)
 console.log(process.env.WEATHER_API_URL, process.env.WEATHER_API_KEY)
+
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
