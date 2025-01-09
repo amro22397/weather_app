@@ -42,6 +42,7 @@ const App = () => {
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
       </div>
+      <div className=""></div>
     </div>
   )
 }

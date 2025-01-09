@@ -11,10 +11,9 @@ const Search = ({ onSearchChange }) => {
   const loadOptions = async (inputValue) => {
     // options.url = `${options.url}/?minPopulation=1000000&namePrefix=${inputValue}`
     // console.log(options.url);
-    const WEATHER_STACK_API_KEY = '93929d99aea2e882f91e05fdc96defa3'
     try {
       // 
-      const response = await axios.get(`http://api.weatherstack.com/current?access_key=${WEATHER_STACK_API_KEY}&query=${inputValue}`);
+      const response = await axios.get(`http://api.weatherstack.com/current?access_key=${process.env.WEATHER_STACK_API_KEY}&query=${inputValue}`);
       console.log(response);
 
       return {

@@ -1,4 +1,4 @@
-export let options = {
+/* export let options = {
     method: 'GET',
     url: `https://wft-geo-db.p.rapidapi.com/v1/geo/cities`,
     headers: {
@@ -8,4 +8,4 @@ export let options = {
   };
   
 export const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5"
-export const WEATHER_API_KEY = "62331b4fbcb93ca8d0b54b79ee352168"
+export const WEATHER_API_KEY = "62331b4fbcb93ca8d0b54b79ee352168" */
