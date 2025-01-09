@@ -6,7 +6,7 @@ import axios from 'axios'
 
 const Search = ({ onSearchChange }) => {
 
-  console.log(process.env.WEATHER_STACK_API_KEY_ANOTHER)
+  console.log(process.env.VC_API_KEY)
 
   const [search, setSearch] = useState(null);
 
@@ -15,13 +15,13 @@ const Search = ({ onSearchChange }) => {
     // console.log(options.url);
     try {
       // 
-      const response = await axios.get(`http://api.weatherstack.com/current?access_key=${process.env.WEATHER_STACK_API_KEY_ANOTHER}&query=${inputValue}`);
+      const response = await axios.get(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${inputValue}?key=${process.env.VC_API_KEY} `);
       console.log(response);
 
       return {
         options: [{
-          value: `${response.data.location.lat} ${response.data.location.lon}`,
-        label: `${response.data.location.name}, ${response.data.location.country}`,
+          value: `${response.data.latitude} ${response.data.longitude}`,
+        label: `${response.data.resolvedAddress}`,
         }] 
 
         /* options: response.data.location.map((city) => {
