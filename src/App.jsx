@@ -12,15 +12,15 @@ const App = () => {
   const [forecast, setForecast] = useState(null);
 
   
-  console.log(process.env.WEATHER_STACK_API_KEY)
-console.log(process.env.WEATHER_API_URL, process.env.WEATHER_API_KEY)
+  console.log(process.env.WEATHER_STACK_API_KEY_ANOTHER)
+console.log(process.env.WEATHER_API_URL_ANOTHER, process.env.WEATHER_API_KEY_ANOTHER)
 
 
   const handleOnSearchChange = (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
 
-    const currentWeatherFetch = fetch(`${process.env.WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_API_KEY}&units=metric`)
-    const forecastFetch = fetch(`${process.env.WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_API_KEY}&units=metric`)
+    const currentWeatherFetch = fetch(`${process.env.WEATHER_API_URL_ANOTHER}/weather?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_API_KEY_ANOTHER}&units=metric`)
+    const forecastFetch = fetch(`${process.env.WEATHER_API_URL_ANOTHER}/forecast?lat=${lat}&lon=${lon}&appid=${process.env.WEATHER_API_KEY_ANOTHER}&units=metric`)
 
     Promise.all([currentWeatherFetch, forecastFetch])
     .then(async (response) => {
