@@ -40,10 +40,11 @@ console.log(process.env.WEATHER_API_URL_ANOTHER, process.env.WEATHER_API_KEY_ANO
     console.log(forecast);
 
   return (
-    <div className='container w-full flex flex-col justify-center h-[90vh] gap-5'>
+    <div className='container w-full flex flex-col justify-center h-[90vh] gap-5
+    mx-4'>
       <Search onSearchChange={handleOnSearchChange} />
-      <div className="flex flex-row justify-between items-center w-full
-      gap-10">
+      <div className="flex xl:flex-row justify-between items-center w-full
+      gap-10 flex-col">
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forecast && <Forecast data={forecast} />}
       </div>

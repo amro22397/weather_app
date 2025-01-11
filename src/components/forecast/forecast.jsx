@@ -16,7 +16,7 @@ const Forecast = ({ data }) => {
     const forecastDays = WEEK_DAYS.slice(dayInWeek, WEEK_DAYS.length).concat(WEEK_DAYS.slice(0, dayInWeek))
 
   return (
-    <div className="w-[750px]"> 
+    <div className="xl:max-w-[800px] w-[98%] sm:w-[90%] md:w-[70%] lg:w-[60%]"> 
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
